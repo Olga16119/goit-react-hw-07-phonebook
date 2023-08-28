@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { addcontact } from 'redux/contactsSlice';
+import { addContacts } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 
 const ContactForm = ({ onSubmit }) => {
@@ -42,7 +42,7 @@ const ContactForm = ({ onSubmit }) => {
     ) {
       return alert(` ${newContact.name} already is in phonebook`);
     }
-    dispatch(addcontact(newContact));
+    dispatch(addContacts(newContact));
     resetForm();
   };
 
